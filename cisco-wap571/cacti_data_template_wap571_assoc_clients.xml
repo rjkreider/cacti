@@ -1,0 +1,126 @@
+<cacti>	
+	<hash_010103620b1f72c6a42851920dc2bce9c5a5eb>
+		<name>WAP571 Assoc Clients</name>
+		<ds>
+			<t_name></t_name>
+			<name>|host_description| - Associated Clients</name>
+			<data_source_path></data_source_path>
+			<data_input_id>hash_030103028716a746d73987b6b0655352f9555b</data_input_id>
+			<t_data_source_profile_id></t_data_source_profile_id>
+			<data_source_profile_id>hash_200103d62c52891f4f9688729a5bc9fad91b18</data_source_profile_id>
+			<t_rrd_step></t_rrd_step>
+			<rrd_step>300</rrd_step>
+			<t_active></t_active>
+			<active>on</active>
+		</ds>
+		<items>
+			<hash_08010347b38160b969a20ae38899bcafe4c8b7>
+				<t_data_source_name></t_data_source_name>
+				<data_source_name>assoc_clients</data_source_name>
+				<t_rrd_minimum></t_rrd_minimum>
+				<rrd_minimum>0</rrd_minimum>
+				<t_rrd_maximum></t_rrd_maximum>
+				<rrd_maximum>200</rrd_maximum>
+				<t_data_source_type_id></t_data_source_type_id>
+				<data_source_type_id>1</data_source_type_id>
+				<rrd_heartbeat>600</rrd_heartbeat>
+				<t_data_input_field_id></t_data_input_field_id>
+				<data_input_field_id>hash_070103c99c933049312d43c9009b494e3ade9d</data_input_field_id>
+			</hash_08010347b38160b969a20ae38899bcafe4c8b7>
+		</items>
+		<data>
+			<item_000>
+				<data_input_field_id>hash_07010335562af5812db4749cb5c1fdff40f43e</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_000>
+			<item_001>
+				<data_input_field_id>hash_070103b6465852448fd7b561e0bb03a2d661b7</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_001>
+			<item_002>
+				<data_input_field_id>hash_070103fa03c5c10fea7e1986c6bf9f89e0ce9a</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_002>
+		</data>
+	</hash_010103620b1f72c6a42851920dc2bce9c5a5eb>
+	<hash_030103028716a746d73987b6b0655352f9555b>
+		<name>Cisco - WAP571 Polling</name>
+		<type_id>1</type_id>
+		<input_string>L2Jpbi9iYXNoIDxwYXRoX2NhY3RpPi9zY3JpcHRzL3dhcDU3MWFzc29jLnNoIDxob3N0bmFtZT4gPHNubXBfcG9ydD4gPHNubXBfY29tbXVuaXR5Pg==</input_string>
+		<fields>
+			<hash_070103c99c933049312d43c9009b494e3ade9d>
+				<name>Associated Clients</name>
+				<update_rra>on</update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code></type_code>
+				<input_output>out</input_output>
+				<data_name>assoc_clients</data_name>
+			</hash_070103c99c933049312d43c9009b494e3ade9d>
+			<hash_07010335562af5812db4749cb5c1fdff40f43e>
+				<name>Hostname</name>
+				<update_rra></update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code>hostname</type_code>
+				<input_output>in</input_output>
+				<data_name>hostname</data_name>
+			</hash_07010335562af5812db4749cb5c1fdff40f43e>
+			<hash_070103b6465852448fd7b561e0bb03a2d661b7>
+				<name>Snmp_community</name>
+				<update_rra></update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code>snmp_community</type_code>
+				<input_output>in</input_output>
+				<data_name>snmp_community</data_name>
+			</hash_070103b6465852448fd7b561e0bb03a2d661b7>
+			<hash_070103fa03c5c10fea7e1986c6bf9f89e0ce9a>
+				<name>Snmp_port</name>
+				<update_rra></update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code>snmp_port</type_code>
+				<input_output>in</input_output>
+				<data_name>snmp_port</data_name>
+			</hash_070103fa03c5c10fea7e1986c6bf9f89e0ce9a>
+		</fields>
+	</hash_030103028716a746d73987b6b0655352f9555b>
+	<hash_200103d62c52891f4f9688729a5bc9fad91b18>
+		<name>5 Minute Collection</name>
+		<step>300</step>
+		<heartbeat>600</heartbeat>
+		<x_files_factor>0.5</x_files_factor>
+		<default>on</default>
+		<cf_items>1|2|3|4</cf_items>
+		<items>
+			<item_000>
+				<name>Daily (5 Minute Average)</name>
+				<steps>1</steps>
+				<rows>600</rows>
+				<timespan>86400</timespan>
+			</item_000>
+			<item_001>
+				<name>Weekly (30 Minute Average)</name>
+				<steps>6</steps>
+				<rows>700</rows>
+				<timespan>604800</timespan>
+			</item_001>
+			<item_002>
+				<name>Monthly (2 Hour Average)</name>
+				<steps>24</steps>
+				<rows>775</rows>
+				<timespan>2618784</timespan>
+			</item_002>
+			<item_003>
+				<name>Yearly (1 Day Average)</name>
+				<steps>288</steps>
+				<rows>797</rows>
+				<timespan>31536000</timespan>
+			</item_003>
+		</items>
+	</hash_200103d62c52891f4f9688729a5bc9fad91b18>
+</cacti>
