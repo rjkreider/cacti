@@ -1,0 +1,105 @@
+-- *****************************************************************
+-- CISCO-WLAN-ACCESS-POINT-REF-MIB.mx
+--   
+-- Copyright (c) 2014 by cisco Systems Inc.
+-- All rights reserved.
+--   
+-- Cisco WAPxxx Wireless Access Point Reference MIB 
+--
+-- This SNMP Management Information Specification
+-- embodies Cisco Corporation's confidential and proprietary
+-- intellectual property. Cisco Corporation retains all title
+-- and ownership in the Specification including any revisions.
+--
+-- This Specification is supplied "AS IS", Cisco Corporation
+-- makes no warranty, either expressed or implied,
+-- as to the use, operation, condition, or performance of the
+-- Specification.
+-- *****************************************************************
+
+CISCO-WLAN-ACCESS-POINT-REF-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    MODULE-IDENTITY,
+    enterprises
+        FROM SNMPv2-SMI;
+
+
+    cisco MODULE-IDENTITY
+    LAST-UPDATED    "201504200000Z"
+        ORGANIZATION "Cisco Systems, Inc"
+        CONTACT-INFO
+          "Postal:               170 West Tasman Drive
+                                 San Jose, CA 95134-1706
+                                 USA"
+        DESCRIPTION
+          "Cisco WAPxxx Wireless Access Point Reference MIB."
+
+        -- Revision history.
+        REVISION
+          "201502250000Z" -- 25 Feb 2015 12:00:00 GMT
+        DESCRIPTION
+          "Initial release."
+
+    ::= {  enterprises 9 }
+
+    
+-- Textual Conventions definition will be defined before this line
+  
+otherEnterprises OBJECT IDENTIFIER
+    ::= { cisco 6 }
+
+ciscosb OBJECT IDENTIFIER
+    ::= { otherEnterprises 1 }
+
+wap11acAP OBJECT IDENTIFIER
+    ::= { ciscosb 34 }
+
+wap11nAP OBJECT IDENTIFIER
+    ::= { ciscosb 32 }
+
+wap121 OBJECT IDENTIFIER
+    ::= { wap11nAP 121 }
+
+indoor OBJECT IDENTIFIER
+    ::= { wap121 1 }
+
+wap321 OBJECT IDENTIFIER
+    ::= { wap11nAP 321 }
+
+indoor OBJECT IDENTIFIER
+    ::= { wap321 1 }
+
+wap551 OBJECT IDENTIFIER
+    ::= { wap11nAP 551 }
+
+indoor OBJECT IDENTIFIER
+    ::= { wap551 1 }
+
+wap561 OBJECT IDENTIFIER
+    ::= { wap11nAP 561 }
+
+indoor OBJECT IDENTIFIER
+    ::= { wap561 1 }
+
+wap371 OBJECT IDENTIFIER
+    ::= { wap11acAP 371 }
+
+indoor OBJECT IDENTIFIER
+    ::= { wap371 1 }
+
+wap571 OBJECT IDENTIFIER
+    ::= { wap11acAP 571 }
+
+indoor OBJECT IDENTIFIER
+    ::= { wap571 1 }
+
+outdoor OBJECT IDENTIFIER
+    ::= { wap571 2 }
+
+wap002 OBJECT IDENTIFIER
+    ::= { ciscosb 104 }
+END
+
+
+--%DNP%  MTF -TRUE MTF
