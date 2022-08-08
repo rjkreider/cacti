@@ -55,7 +55,7 @@ $arr_index = cacti_snmp_walk($hostname, $snmp_community, $oids["index"], $snmp_v
 					$arr_index2[$i] =  substr($arr_index[$i]['oid'],26);
 			}
 
-			$arr = win_services_reindex(cacti_snmp_walk($hostname, $snmp_community, $oids[$arg], $snmp_version, "", "", $snmp_port, $snmp_timeout, SNMP_POLLER));
+			$arr = win_services_reindex(cacti_snmp_walk($hostname, $snmp_community, $oids[$arg], $snmp_version, "", "", "", "", "", "", $snmp_port, $snmp_timeout, "", "", SNMP_POLLER));
 			for ($i = 0; $i < sizeof($arr_index2); $i++) {
 				print $arr_index2[$i] . " !" . $arr[$i] . "\n";
 			}
@@ -63,7 +63,8 @@ $arr_index = cacti_snmp_walk($hostname, $snmp_community, $oids["index"], $snmp_v
 			$arg = $arg1;
 			$index = trim($arg2);
 			if ($arg == "servstate") {
-				$x = cacti_snmp_get($hostname, $snmp_community, $oids[$arg] . '.' . $index, $snmp_version, "", "", $snmp_port, $snmp_timeout, SNMP_POLLER);
+				$x = cacti_snmp_get($hostname, $snmp_community, $oids[$arg] . '.' . $index, $snmp_version, "", "", "", "", "", "", $snmp_port, $snmp_timeout, "", "", SNMP_POLLER);
+				//$x = cacti_snmp_get($hostname, $snmp_community, $oids[$arg] . '.' . $index, $snmp_version, "", "", $snmp_port, $snmp_timeout, SNMP_POLLER);
 				if (trim($x) == '') $x = 0;
 				if ($x < 4) $x = 0;
 				if ($x == 4) $x = 1;
